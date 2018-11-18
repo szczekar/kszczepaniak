@@ -27,8 +27,6 @@ public class FirstController {
     @RequestMapping(value = "/today", method = RequestMethod.GET)
     @ResponseBody
     public String helloWithDate() {
-        return "Hello, today is " + LocalDateTime.now() + ", Lotto numbers for today: " + lottoService.generateNumbers();
+        return lottoService.generateWelcome()+ "<br />" + "Hello, today is " + "<br />" + " " + LocalDateTime.now()+"<br />"+ " Lotto numbers for today: " + lottoService.generateNumbers();
     }
-
-
 }

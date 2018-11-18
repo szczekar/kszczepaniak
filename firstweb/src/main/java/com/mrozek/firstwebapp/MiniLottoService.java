@@ -7,6 +7,11 @@ import java.util.Random;
 @Service
 public class MiniLottoService implements LottoService {
     @Override
+    public String generateWelcome() {
+        return "Check Your numbers !";
+    }
+
+    @Override
     public String generateNumbers() {
         Random random = new Random();
         StringBuilder sb = new StringBuilder();
